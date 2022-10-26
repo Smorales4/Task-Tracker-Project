@@ -1,13 +1,6 @@
-// fetch("http://localhost:3000/")
-//     .then((response)=> {
-//         response.json();
-//     })
-//     .then((data) => {
-//         console.log(data);
-//     });
 
 window.addEventListener('load', () => {
-    // const fs = require('fs');
+
     var jsonData = ["toShop", "name", "newFormShop"];
 
     toShop = JSON.parse(localStorage.getItem('toShop')) || [];
@@ -49,12 +42,6 @@ window.addEventListener('load', () => {
         const shopList = document.querySelector('#shopList');
         shopList.innerHTML = '';
         console.log(toShop)
-
-        // fetch("http://localhost:3000/")
-        // .then((response)=> response.json()
-        // )
-        // .then((data) => {
-        //     console.log(data);
 
             toShop.forEach(shop => {
                 const shopItem = document.createElement('div');
@@ -124,7 +111,7 @@ window.addEventListener('load', () => {
                         shop.content = e.target.value;
                         localStorage.setItem('toShop', JSON.stringify(toShop))
                         DisplayShopList();
-    ;                })
+                    })
                 })
                 
                 deleteButton.addEventListener('click', e => {
@@ -134,12 +121,7 @@ window.addEventListener('load', () => {
                 })
             
             })
-        // });
-
-
     }
-
-
 })
 
 //* Code for TimeGreeting *//
