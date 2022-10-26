@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="shoppingListApp">
+        <section class="greet">
+            <h2 class="title">
+                <div id="timeGreeting"></div>
+                    <input type="text" id="name" placeholder="Your name here">
+                
+            </h2>
+        </section>
+        <section class="do-shopping">
+            <h3>Create your own Shop List</h3>
+            <form id="newFormShop" action="/add" method="post" >
+                <h4>What do you want to shop today?</h4>
+                <input 
+                    type="text"
+                    name="content" 
+                    id="content" 
+                    placeholder="ex: Tomato" required/>
+                <h4>Select the category</h4>
+                <div class="options">
+                    <label>
+                        <input 
+                            type="radio"
+                            name="category"
+                            id="category1"
+                            value="food"  />
+                        <span class="bubble food"></span>
+                        <div>Food</div>
+                    </label>
+
+                    <label>
+                        <input 
+                            type="radio"
+                            name="category"
+                            id="category2"
+                            value="personalItems"/>
+                        <span class="bubble personalItems"></span>
+                        <div class="personalTitle">Personal Items</div>
+                    </label>
+                </div>
+
+                <input type="submit" value="Add Item">
+            </form>    
+        </section>
+        <section class="shopList">
+            <h3>SHOP LIST</h3>
+            <div class="List" id="shopList">
+                <!-- <div class="toshopItem">
+                    <label>
+                        <input type="checkbox"/>
+                        <span class="bubble Food"></span>
+                    </label>
+                    <div class="shoppingContent">
+                        <input type="text" value="Math homework due" readonly/>
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="toshopItem">
+                    <label>
+                        <input type="checkbox"/>
+                        <span class="bubble personalItems"></span>
+                    </label>
+                    <div class="todoContent">
+                        <input type="text" value="Math homework due" readonly/>
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

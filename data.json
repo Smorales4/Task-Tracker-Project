@@ -1,0 +1,10 @@
+{
+    "products": [
+        {
+            "content": "Happy",
+            "category": "food",
+            "done": false,
+            "createdAt": 1666296514753
+        }
+    ]
+}
