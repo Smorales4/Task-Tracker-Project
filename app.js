@@ -6,7 +6,6 @@ window.addEventListener('load', () => {
     toShop = JSON.parse(localStorage.getItem('toShop')) || [];
     const nameInput = document.querySelector('#name');
     const newFormShop = document.querySelector('#newFormShop');
-
     const username = localStorage.getItem('username') || '';
 
     nameInput.value = username;
@@ -31,10 +30,6 @@ window.addEventListener('load', () => {
         const shopItem = JSON.stringify(toShop);
         localStorage.setItem('toShop', shopItem);
         console.log(shopItem);
-        // fs.readFile("./data.json", (err, data) => {
-        //     if (err) return err;
-        //     res.json(JSON.parse(data));
-        // });
         DisplayShopList();
     })
 

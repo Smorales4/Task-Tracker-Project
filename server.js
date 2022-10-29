@@ -28,8 +28,6 @@ app.delete('/', function (req, res) {
   const products =  data.products.filter(t => t != shop);
   data.products = products;
   res.send("deleted")
-  console.log(products)
-  console.log(shop)
 })
 
 
